@@ -13,6 +13,7 @@ class Classifier(object):
         self.maxlength = 25
  
     def text_process_entry(self, example):
+    	# Choose the features you want with the power of COMMENTING OUT CODE
         site_text = nltk.clean_html(example[0]).lower()
         original_tokens = itertools.chain.from_iterable(nltk.word_tokenize(w) for w in nltk.sent_tokenize(site_text))
         #tokens = original_tokens #+ [' '.join(w) for w in nltk.util.ngrams(original_tokens, 2)]
